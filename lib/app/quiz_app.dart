@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:quiz_app/core/resources/font_manager.dart';
-import 'package:quiz_app/view/splash/screens/splash_screen.dart';
+import 'package:quiz_app/core/resources/route_manger.dart';
 
 class QuizApp extends StatelessWidget {
   const QuizApp({super.key});
@@ -9,9 +7,10 @@ class QuizApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: RoutesManger.routes,
       debugShowCheckedModeBanner: false,
       //theme: ThemeData(fontFamily:GoogleFonts.lobste ,),
-      home: SplashScreen(),
+      initialRoute: RoutesName.kSplashScreen,
     );
   }
 }
