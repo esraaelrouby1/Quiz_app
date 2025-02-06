@@ -5,4 +5,5 @@ class AssetsValuesManger {
       "assets/images/onboardingImage (2).svg";
   static const String kOnBoardgingImage1 =
       "assets/images/onboardingImage (3).svg";
+  static const String kLoginScreenImage = "assets/images/loginScreen.png";
 }

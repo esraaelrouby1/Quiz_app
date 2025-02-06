@@ -38,9 +38,11 @@ class OnBoardingController {
     currentIndexPage == ConstValues.onBoardingListConst.length - 1
         ? goToLoginPage(context: context)
         : currentIndexPage++;
+
     onBoardgingPageController.animateToPage(currentIndexPage,
         duration: Duration(milliseconds: 350), curve: Curves.easeInOut);
     inputDataDotIndicator.add(currentIndexPage);
+    inputDataStartText.add(currentIndexPage);
   }
 
   void goToLoginPage({required BuildContext context}) {
