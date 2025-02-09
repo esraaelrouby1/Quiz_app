@@ -53,8 +53,8 @@ class _AnswerScreenState extends State<AnswerScreen> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       CustomOrderOfQuestionAns(
-                        order: "1",
-                      ),
+                          order: index + 1,
+                          isCorrect: _answerController.answers[index]),
                       CustomAnswerStatus(
                         question: ConstValues.quizQuestions[index].questions,
                         answer: _answerController.studentAnswers[

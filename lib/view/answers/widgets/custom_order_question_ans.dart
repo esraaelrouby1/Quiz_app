@@ -9,15 +9,17 @@ class CustomOrderOfQuestionAns extends StatelessWidget {
   const CustomOrderOfQuestionAns({
     super.key,
     required this.order,
+    required this.isCorrect,
   });
-  final String order;
+  final int order;
+  final bool isCorrect;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: HeightValues.h10),
       width: WidthValues.w58,
       height: 35,
-      alignment: Alignment.center,
+      // alignment: Alignment.center,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -26,7 +28,7 @@ class CustomOrderOfQuestionAns extends StatelessWidget {
             offset: Offset(0, 10),
           ),
         ],
-        color: ColorManger.kGreenBold,
+        color: isCorrect == true ? ColorManger.kGreenBold : Colors.red,
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(20),
           bottomRight: Radius.circular(20),
@@ -38,7 +40,7 @@ class CustomOrderOfQuestionAns extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            order,
+            "$order",
             style: GoogleFonts.baloo2(
                 fontWeight: FontWeight.bold,
                 fontSize: FontSize.f21,
