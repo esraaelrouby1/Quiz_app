@@ -71,13 +71,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       return _loginController.validateName(value);
                     },
                     onChanged: (value) {
+                      // _loginController.name = value;
                       _loginController.onChangedTextFormField();
                     },
                     keyForm: _loginController.formKeyName,
+                    controllerName: _loginController.controllerNameTextField,
                   ),
                 ],
               ),
               CustomMaterialButton(
+                text: "Start",
                 isActiveOutputStream: _loginController.isActiveOutputStream,
                 onPressed: () {
                   _loginController.navigateToQuizScreen(context);

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:quiz_app/core/resources/route_manger.dart';
 
 class LoginController {
-  String name = "";
+  // String name = "";
   bool buttonIsActive = false;
 
   late GlobalKey<FormState> formKeyName;

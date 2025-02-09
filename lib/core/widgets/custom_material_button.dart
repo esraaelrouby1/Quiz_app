@@ -10,9 +10,11 @@ class CustomMaterialButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.isActiveOutputStream,
+    required this.text,
   });
   final VoidCallback onPressed;
   final Stream<bool> isActiveOutputStream;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -38,7 +40,7 @@ class CustomMaterialButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(
-            "Start",
+            text,
             style: GoogleFonts.baloo2(
               fontSize: FontSize.f24,
               color: ColorManger.kLightWhite,
