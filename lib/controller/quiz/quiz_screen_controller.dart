@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:quiz_app/core/resources/const_values.dart';
 import 'package:quiz_app/core/resources/route_manger.dart';
+import 'package:quiz_app/core/resources/strings_values.dart';
 
 class QuizScreenController {
   int countQuestions = 0;
@@ -47,7 +48,7 @@ class QuizScreenController {
   bool isNextActive = false;
 
   late BuildContext _context;
-
+  String _name = "";
 //------------------------constructor----------------------------//
 
   QuizScreenController(
@@ -169,10 +170,18 @@ class QuizScreenController {
     inputDataButtonStatus.add(isNextActive);
   }
 
+// fun to send your name to the answer screen
+  void addName(String name) {
+    _name = name;
+  }
+
 //  navigate to next page==>ans screen
   void goToAnswerScreen() {
-    Navigator.restorablePushReplacementNamed(
-        _context, RoutesName.kAnswerScreen);
+    Navigator.restorablePushReplacementNamed(_context, RoutesName.kAnswerScreen,
+        arguments: {
+          StringsValues.kName: _name,
+          StringsValues.kListCorrectAnswer: listCorrectanswers,
+        });
   }
 
   onDispose() {

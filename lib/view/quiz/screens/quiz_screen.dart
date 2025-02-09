@@ -38,7 +38,10 @@ class _QuizScreenState extends State<QuizScreen>
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
+    String name = ModalRoute.of(context)!.settings.arguments as String;
+    _quizScreenController.addName(name);
     return Scaffold(
       backgroundColor: ColorManger.kLightWhite,
       appBar: CustomAppBarQuizScreen(

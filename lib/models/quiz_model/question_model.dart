@@ -1,12 +1,12 @@
 class QuestionModel {
   late String _questions;
   late List<dynamic> _listAnswer;
-  late dynamic _correctAnswer;
+  late int _correctAnswer;
 
   QuestionModel(
       {required String questions,
       required List<dynamic> listAnswer,
-      required dynamic correctAnswer}) {
+      required int correctAnswer}) {
     _questions = questions;
 
     _listAnswer = listAnswer;

@@ -25,12 +25,12 @@ class ConstValues {
     QuestionModel(
       questions: "What language is used to develop Flutter apps?",
       listAnswer: ["Java", "Dart", "Swift", "Kotlin"],
-      correctAnswer: "Dart",
+      correctAnswer: 1,
     ),
     QuestionModel(
       questions: "Which widget is used to create a scrollable list in Flutter?",
       listAnswer: ["Column", "Row", "Stack", "ListView"],
-      correctAnswer: "ListView",
+      correctAnswer: 3,
     ),
     QuestionModel(
       questions: "What is the command to create a new Flutter project?",
@@ -40,37 +40,37 @@ class ConstValues {
         "flutter create my_app",
         "flutter init"
       ],
-      correctAnswer: "flutter create my_app",
+      correctAnswer: 2,
     ),
     QuestionModel(
       questions: "Which company created Flutter?",
       listAnswer: ["Google", "Apple", "Microsoft", "Facebook"],
-      correctAnswer: "Google",
+      correctAnswer: 0,
     ),
     QuestionModel(
       questions: "Which widget is used to create a button in Flutter?",
       listAnswer: ["Container", "ElevatedButton", "Text", "ListTile"],
-      correctAnswer: "ElevatedButton",
+      correctAnswer: 1,
     ),
     QuestionModel(
       questions: "What is the extension of a Dart file?",
       listAnswer: [".dart", ".flutter", ".java", ".py"],
-      correctAnswer: ".dart",
+      correctAnswer: 0,
     ),
     QuestionModel(
       questions: "What function is used to start a Flutter app?",
       listAnswer: ["main()", "startFlutter()", "runApp()", "initializeApp()"],
-      correctAnswer: "runApp()",
+      correctAnswer: 2,
     ),
     QuestionModel(
       questions: "Which package is used for handling HTTP requests in Flutter?",
       listAnswer: ["http", "dio", "flutter_http", "requests"],
-      correctAnswer: "http",
+      correctAnswer: 0,
     ),
     QuestionModel(
       questions: "Which widget is used to display an image in Flutter?",
       listAnswer: ["Image", "Picture", "Icon", "Photo"],
-      correctAnswer: "Image",
+      correctAnswer: 0,
     ),
     QuestionModel(
       questions: "What is Flutter primarily used for?",
@@ -80,7 +80,7 @@ class ConstValues {
         "Backend development",
         "Mobile & Web development"
       ],
-      correctAnswer: "Mobile & Web development",
+      correctAnswer: 3,
     ),
   ];
 }
